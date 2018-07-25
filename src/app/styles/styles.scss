@@ -1,0 +1,20 @@
+$color-font-title: #1a5377;
+$color-font-comment: #01779e;
+$color-main-bg: #fff;
+$color-main: #eefcff;
+$color-main-border: #ccebf1;
+
+@import "main";
+@import "components";
+
+body{
+  background: $color-main-bg;
+}
+
+a,p,h1,h2,h3,h4,h5,h6{
+  color: $color-font-title;
+}
+.comment{
+  color: $color-font-comment;
+}
+
