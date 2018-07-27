@@ -16,6 +16,7 @@ import { HomeComponent } from './home/home.component';
     HomeFirstComponent,
     HomeSecondComponent,
     HomeThirdComponent,
-    HomeComponent]
+    HomeComponent
+  ]
 })
 export class HomeModule { }

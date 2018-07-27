@@ -7,6 +7,8 @@ import { MainLayoutComponent } from './core/main-layout/main-layout.component';
 import { NoContentComponent } from './core/no-content-component/no-content.component';
 import { NavigationComponent } from './core/navigation/navigation.component';
 import { AuthorizationComponent } from './core/authorization/authorization.component';
+import { WorkComponent } from './core/work/work.component';
+import { AuthDetectService } from './core/service/auth-detect.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,7 @@ import { AuthorizationComponent } from './core/authorization/authorization.compo
     BrowserModule,
     routing
   ],
-  providers: [],
+  providers: [AuthDetectService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

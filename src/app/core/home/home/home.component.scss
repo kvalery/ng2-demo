@@ -1,0 +1,13 @@
+.module-nav{
+  border-radius: 0 0 4px 4px ;
+  background: gainsboro;
+  .nav-link{
+    display: inline-block;
+  }
+}
+.nav-link{
+  opacity: 0.4;
+  &.active{
+    opacity: 1;
+  }
+}

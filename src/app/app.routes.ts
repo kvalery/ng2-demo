@@ -2,16 +2,22 @@ import { RouterModule, Routes } from '@angular/router';
 import { ModuleWithProviders } from '@angular/core';
 import { MainLayoutComponent } from './core/main-layout/main-layout.component';
 import { NoContentComponent } from './core/no-content-component/no-content.component';
+import { AuthDetectService } from './core/service/auth-detect.service';
 
 export const routes: Routes = [
   {
     path: '',
     component: MainLayoutComponent,
+    canActivate: [ AuthDetectService ],
     children: [
       {
         path: '',
-        redirectTo: 'home',
+        redirectTo: 'work',
         pathMatch: 'full',
+      },
+      {
+        path: 'work',
+        loadChildren: './core/work/work.module#WorkModule',
       },
       {
         path: 'home',
@@ -26,20 +32,3 @@ export const routes: Routes = [
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(routes, { useHash: true });
-
-//
-// {
-//   path: '',
-//     component: MainLayoutComponent,
-//   children: [
-//   {
-//     path: '',
-//     redirectTo: 'dashboard',
-//     pathMatch: 'full',
-//   },
-//   {
-//     path: 'audit-log',
-//     loadChildren: './pages/+audit-log/audit-log.module#AuditLogModule',
-//   },
-// ]
-// },
